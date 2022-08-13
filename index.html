@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/icon.png">
+    <title>Password Generator</title>
+</head>
+<body>
+    <section>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="box">
+            <div class="square" style="--i:0;"></div>
+            <div class="square" style="--i:1;"></div>
+            <div class="square" style="--i:2;"></div>
+            <div class="square" style="--i:3;"></div>
+            <div class="square" style="--i:4;"></div>
+            <div class="container">
+                <h3> Password Generator </h3>
+
+                <div class="options">
+                    <div class="option">
+                        <label>Password Length</label>
+                        <!-- <input class="pass-length" type="range" id="length" min='4' max='20' value='20' /> -->
+                        <input type="range" class="pass-length" value="8" min="1" max="100" id="length" oninput="this.nextElementSibling.value = this.value">
+                        <output>8</output>
+                    </div>
+                    <div class="option">
+                        <label>Include digits</label>
+                        <input class="check-box" type="checkbox" id="numbers" checked />
+                    </div>
+                    <div class="option">
+                        <label>Include symbols</label>
+                        <input class="check-box" type="checkbox" id="symbols" checked />
+                    </div>
+                    <div class="option">
+                        <label>Include uppercase letters</label>
+                        <input class="check-box" type="checkbox" id="lowercase" checked />
+                    </div>
+                    <div class="option">
+                        <label>Include lowercase letters</label>
+                        <input class="check-box" type="checkbox" id="uppercase" checked />
+                    </div>
+                </div>
+                <div class="result-container">
+                    <span id="result"></span>
+                    <button class="btn" id="clipboard">
+                        <i class="clipboard"></i>
+                    </button>
+                </div>
+                <button class="generate-btn" id="generate" >Generate password</button>
+            </div>
+        </div>
+    </section>
+    <script src="./main.js"></script>
+</body>
+</html>

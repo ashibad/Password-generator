@@ -1,0 +1,237 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+	font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+body{
+    overflow: hidden;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #f1f4f9, #dff1ff);
+}
+
+section .color {
+    position: absolute;
+    filter: blur(190px);
+	animation: animate 10s alternate-reverse infinite;
+	animation-delay: calc(-1s * var(--i));
+
+}
+
+section .color:nth-child(1){
+    top: -350px;
+    width: 600px;
+    height: 560px;
+    background: #ff359b;
+}
+
+section .color:nth-child(2){
+    bottom: -150px;
+    left: 20px;
+    width: 500px;
+    height: 500px;
+    background: rgb(255, 253, 153);
+}
+
+
+section .color:nth-child(3){
+    bottom: 10px;
+    right: 20px;
+    width: 300px;
+    height: 300px;
+    background: #00d2ff;
+}
+
+section .color:nth-child(4){
+    top: -150px;
+    left: 25px;
+    width: 400px;
+    height: 400px;
+    background: #52ffa9;
+}
+
+section .color:nth-child(5){
+    top: -150px;
+    right: 30px;
+    width: 400px;
+    height: 450px;
+    background: #fffd97;
+}
+
+section .color:nth-child(6){
+    bottom: 15px;
+    width: 400px;
+    height: 250px;
+    background: #6f65faec;
+}
+
+.box {
+	position: relative;
+}
+
+.box .square{
+	position: absolute;
+	backdrop-filter: blur(5px);
+	box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	border-right: 1px solid rgba(255, 255, 255, 0.2);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 10px;
+	animation: animate 10s linear infinite;
+	animation-delay: calc(-1s * var(--i));
+}
+
+@keyframes animate {
+	0%,100% {
+		transform: translateY(-40px);
+	}
+	50% {
+		transform: translateY(40px);
+	}
+}
+
+.box .square:nth-child(1){
+	top: -50px;
+	left: -60px;
+	width: 100px;
+	height: 100px;
+}
+
+.box .square:nth-child(2){
+	top: 350px;
+	left: -150px;
+	width: 120px;
+	height: 120px;
+}
+
+
+.box .square:nth-child(3){
+	bottom: 90px;
+	right: -90px;
+	width: 80px;
+	height: 80px;
+}
+.box .square:nth-child(4){
+	bottom: -80px;
+	left: 100px;
+	width: 50px;
+	height: 50px;
+}
+
+.box .square:nth-child(5){
+	top: -80px;
+	left: 140px;
+	width: 60px;
+	height: 60px;
+}
+
+
+
+.container {
+	width: 500px;
+	height: 460px;
+	min-height: 400px;
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 10px;
+	backdrop-filter: blur(5px);
+	box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	border-right: 1px solid rgba(255, 255, 255, 0.2);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+h3 {
+	text-align: center;
+	margin: 40px 0 20px;
+}
+
+.check-box {
+	margin-right: 0;
+}
+.result-container {
+	background-color: rgba(197, 197, 197, 0.137);
+	display: flex; 
+	justify-content: flex-start;
+	align-items: center;
+	position: relative;
+	font-size: 18px;
+	letter-spacing: 1px;
+	padding: 12px 10px;
+	height: 50px;
+	width: 100%;
+	margin-top: 30px;
+	border-radius: 10px;
+}
+
+.result-container #result {
+  word-wrap: break-word;
+  max-width: calc(100% - 40px);
+}
+
+.options{
+	margin-top: 30px;
+
+}
+
+.result-container .btn {
+	font-size: 20px;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	height: 40px;
+	width: 40px;
+}
+
+.btn {
+	border: none;
+	cursor: pointer;
+	font-size: 16px;
+	padding: 9px 12px;
+	border-radius: 5px;
+	margin-right: 2px;
+	/* background-image: url(./images/icon.png); */
+}
+
+.generate-btn {
+	display: block;
+	height:55px;
+	width: 250px;
+	margin: 130px;
+	margin-top: 30px;
+	border:none;
+	border-radius: 5px;
+	background-color: #b5b1ee4f;
+	transition: 0.4s;
+}
+
+.generate-btn:hover{
+	cursor: pointer;
+	transform: scale(1.1);
+	background-color: #b5b1ee4f;
+	color: #000;
+}
+
+.option {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 15px 0px;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+
+@media screen and (max-width: 400px) {
+	.result-container {
+		font-size: 14px;
+	}
+}
